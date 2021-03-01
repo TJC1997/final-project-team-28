@@ -1,10 +1,12 @@
+import TopNavbar from "../components/TopNavbar";
 
 const Home = () => {
-    return (
-        <div>
-            Home page
-        </div>
-    )
-}
+  return (
+    <div>
+      <TopNavbar home />
+      Home page
+    </div>
+  );
+};
 
 export default Home;
