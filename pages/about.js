@@ -7,6 +7,20 @@ const About = () => {
 
   const [pictures, set_pictures] = useState([]);
 
+  function generateLink(pic) {
+    console.log(pic);
+    return (
+      "https://farm" +
+      pic.farm +
+      ".staticflickr.com/" +
+      pic.server +
+      "/" +
+      pic.id +
+      "_" +
+      pic.secret +
+      ".jpg"
+    );
+  }
   useEffect(async () => {
     async function featchSearchResults() {
       let jsBody = {};
@@ -29,28 +43,14 @@ const About = () => {
     featchSearchResults();
   }, []);
 
-  console.log(pictures);
-
-  const p1 = pictures[0];
-  const p2 = pictures[1];
-  console.log(p1.farm);
-  const s1 =
-    "https://farm" +
-    p1.farm +
-    ".staticflickr.com/" +
-    p1.server +
-    "/" +
-    p1.id +
-    "_" +
-    p1.secret +
-    ".jpg";
-  console.log(s1);
   return (
     <Layout>
       <TopNavbar about />
       <div className="main-contents">
         <h3>Our Story Page</h3>
-        <img src={s1} />
+        {Object.keys(pictures).map((item, i) => (
+          <img src={generateLink(pictures[item])} key={i} />
+        ))}
       </div>
     </Layout>
   );
