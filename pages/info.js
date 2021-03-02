@@ -1,10 +1,13 @@
 import TopNavbar from "../components/TopNavbar";
+import Layout from "../components/Layout";
 const Info = () => {
   return (
-    <div>
+    <Layout>
       <TopNavbar info />
-      Wedding Info Page
-    </div>
+      <div className="main-contents">
+        <h3>Wedding Info Page</h3>
+      </div>
+    </Layout>
   );
 };
 

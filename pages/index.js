@@ -1,11 +1,13 @@
 import TopNavbar from "../components/TopNavbar";
-
+import Layout from "../components/Layout";
 const Home = () => {
   return (
-    <div>
+    <Layout>
       <TopNavbar home />
-      Home page
-    </div>
+      <div className="main-contents">
+        <h3>Home Page</h3>
+      </div>
+    </Layout>
   );
 };
 
