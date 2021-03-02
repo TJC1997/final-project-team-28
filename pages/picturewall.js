@@ -1,11 +1,13 @@
 import TopNavbar from "../components/TopNavbar";
-
+import Layout from "../components/Layout";
 const PictureWall = () => {
   return (
-    <div>
+    <Layout>
       <TopNavbar picturewall />
-      Picture Wall Page
-    </div>
+      <div className="main-contents">
+        <h3>Picture Wall Page</h3>
+      </div>
+    </Layout>
   );
 };
 

@@ -1,11 +1,14 @@
 import React from "react";
-import Link from "next/link";
+import { AiFillHeart } from "react-icons/ai";
 import { Navbar, Nav } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 export default function TopNavbar(props) {
   return (
     <Navbar className="bg-purple" expand="lg">
+      <Navbar.Brand href="/">
+        Tony <AiFillHeart /> Kaitlin
+      </Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto">

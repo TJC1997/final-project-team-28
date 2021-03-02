@@ -1,10 +1,13 @@
 import TopNavbar from "../components/TopNavbar";
+import Layout from "../components/Layout";
 const Registration = () => {
   return (
-    <div>
+    <Layout>
       <TopNavbar registration />
-      Registration page
-    </div>
+      <div className="main-contents">
+        <h3>Registration Page</h3>
+      </div>
+    </Layout>
   );
 };
 
