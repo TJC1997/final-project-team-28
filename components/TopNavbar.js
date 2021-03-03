@@ -13,35 +13,35 @@ export default function TopNavbar(props) {
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto">
           {props.home ? (
-            <Nav.Link className=" active" href="/">
+            <Nav.Link className=" active .nav-link" href="/">
               Home
             </Nav.Link>
           ) : (
             <Nav.Link href="/">Home</Nav.Link>
           )}
           {props.about ? (
-            <Nav.Link className=" active" href="/about">
+            <Nav.Link className=" active .nav-link" href="/about">
               Our Story
             </Nav.Link>
           ) : (
             <Nav.Link href="/about">Our Story</Nav.Link>
           )}
           {props.info ? (
-            <Nav.Link className=" active" href="/info">
+            <Nav.Link className=" active .nav-link" href="/info">
               Wedding Info
             </Nav.Link>
           ) : (
             <Nav.Link href="/info">Wedding Info</Nav.Link>
           )}
           {props.picturewall ? (
-            <Nav.Link className=" active" href="/picturewall">
+            <Nav.Link className=" active .nav-link" href="/picturewall">
               Picture Wall
             </Nav.Link>
           ) : (
             <Nav.Link href="/picturewall">Picture Wall</Nav.Link>
           )}
           {props.registration ? (
-            <Nav.Link className=" active" href="/registration">
+            <Nav.Link className=" active .nav-link" href="/registration">
               Registration
             </Nav.Link>
           ) : (
