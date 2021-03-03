@@ -1,5 +1,6 @@
 import TopNavbar from "../components/TopNavbar";
 import Layout from "../components/Layout";
+
 const PictureWall = () => {
   return (
     <Layout>
