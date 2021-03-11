@@ -1,9 +1,14 @@
 import TopNavbar from "../components/TopNavbar";
 import Layout from "../components/Layout";
 import React, { useEffect, useState } from "react";
+import { Carousel } from "react-bootstrap";
+import "bootstrap/dist/css/bootstrap.min.css";
+import aboutText from "../data/aboutText.json";
+
+const API_KEY = "f640a1d7d20cf0f12efc4848065a016e";
 
 const About = () => {
-  const child_tag = "child";
+  const page_tag = "about";
 
   const [pictures, set_pictures] = useState([]);
 
@@ -25,7 +30,7 @@ const About = () => {
     async function featchSearchResults() {
       let jsBody = {};
       try {
-        const link = `https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=401bb95aed4a6262fce92c7268c892cf&user_id=192392684%40N08&tags=${child_tag}&format=json&nojsoncallback=1&auth_token=72157718485143846-d170d219229460cc&api_sig=26d44d3df1928c1205349e8876925ce2`;
+        const link = `https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=${API_KEY}&user_id=192392684%40N08&tags=${page_tag}&format=json&nojsoncallback=1`;
         const res = await fetch(link);
         jsBody = await res.json();
         console.log(link);
@@ -38,7 +43,10 @@ const About = () => {
           // throw e;
         }
       }
-      set_pictures(jsBody.photos.photo);
+      const photos = []
+        .concat(jsBody.photos.photo)
+        .sort((a, b) => (a.title > b.title ? 1 : -1));
+      set_pictures(photos);
     }
     featchSearchResults();
   }, []);
@@ -48,9 +56,24 @@ const About = () => {
       <TopNavbar about />
       <div className="main-contents">
         <h3>Our Story Page</h3>
-        {Object.keys(pictures).map((item, i) => (
+        {/* {Object.keys(pictures).map((item, i) => (
           <img src={generateLink(pictures[item])} key={i} />
-        ))}
+        ))} */}
+
+        <Carousel className="carousel">
+          {Object.keys(pictures).map((item, i) => (
+            <Carousel.Item key={i} interval={1000000000}>
+              <img
+                className="carousel-img"
+                src={generateLink(pictures[item])}
+              />
+              <p className="carousel-cap">
+                <h4>{aboutText[item].title}</h4>
+                <p>{aboutText[item].text}</p>
+              </p>
+            </Carousel.Item>
+          ))}
+        </Carousel>
       </div>
     </Layout>
   );
