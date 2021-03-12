@@ -51,69 +51,63 @@ function PictureImg(props) {
     );
   }
 
+  // console.log(pictures[props.pic_id]);
+
   return (
     <div>
-      {Object.keys(pictures).map(
-        (item, i) =>
-          i == props.pic_id && (
-            <img
-              key={i}
-              className="big-picture-img"
-              src={generateLink(pictures[item])}
-            />
-          )
+      {!loading && (
+        <img
+          className="big-picture-img"
+          src={generateLink(pictures[props.pic_id])}
+        />
       )}
     </div>
   );
 }
 
 function PicturePage() {
-  // const router = useRouter();
-  // const id = router.query.id;
-  // let pic_id = id;
-
-  const [id, set_id] = useState(0);
+  const [id, set_id] = useState("");
   const router = useRouter();
-  let pic_id = 0;
+  // const id = router.query.id;
+
+  function findTag() {
+    if (id < 14) {
+      return [id, "Corvallis"];
+    } else if (id >= 14 && id < 24) {
+      return [id - 14, "craterlake"];
+    } else if (id >= 24 && id < 37) {
+      return [id - 24, "hike"];
+    } else if (id >= 37 && id < 43) {
+      return [id - 37, "crab"];
+    } else if (id >= 43 && id < 47) {
+      return [id - 43, "xmas"];
+    } else {
+      return [id - 47, "MT.Pisgah"];
+    }
+  }
 
   useEffect(() => {
     if (router && router.query) {
-      // console.log(router.query);
+      console.log("ID", router.query.id);
       set_id(router.query.id);
     }
   }, [router]);
 
-  function findTag() {
-    pic_id = id;
-    if (id < 14) {
-      return "Corvallis";
-    } else if (id >= 14 && id < 24) {
-      pic_id = id - 14;
-      return "craterlake";
-    } else if (id >= 24 && id < 37) {
-      pic_id = id - 24;
-      return "hike";
-    } else if (id >= 37 && id < 43) {
-      pic_id = id - 37;
-      return "crab";
-    } else if (id >= 43 && id < 47) {
-      pic_id = id - 43;
-      return "xmas";
-    } else {
-      pic_id = id - 47;
-      return "MT.Pisgah";
-    }
-  }
-  const tag = findTag();
-  // console.log(tag, pic_id);
+  const [pic_id, tag] = findTag();
 
   return (
     <div>
       <TopNavbar picturewall />
-      <div className="big-picture">
-        <PictureImg className="main-content" tag={tag} pic_id={pic_id} />
-      </div>
-      {/* <Footer /> */}
+      {id != "" && id != undefined && (
+        <div className="big-picture">
+          <PictureImg
+            className="main-content"
+            tag={tag}
+            pic_id={pic_id}
+            key={id}
+          />
+        </div>
+      )}
     </div>
   );
 }
