@@ -1,11 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
 
 html,
-body {
-  padding: 0;
-  margin: 0;
-  background-color: cornsilk !important;
-  height: 100%;
+body,
+body > div:first-child,
+div#__next,
+div#__next > div {
+  height: 95% !important;
+  background-color: lightblue !important;
 }
 
 * {
@@ -13,7 +14,10 @@ body {
 }
 /*The following CSS are for the .main-contents and layout */
 .main-contents {
+  margin-top: 10px;
+  margin-bottom: 10px;
   text-align: center;
+  height: auto !important;
 }
 
 .main-contents h3 {
@@ -60,19 +64,19 @@ footer {
 
 /*The following CSS are for the Footer */
 
-.footer {
-  color: white;
-  background-color: #aac3c0;
-}
-
 .footer a {
   color: #552c4a;
 }
 
 footer {
+  margin-top: 10px;
   text-align: center;
   font-size: 15px;
-  color: #552c4a;
+  color: white;
+  background-color: #aac3c0;
+  position: "absolute";
+  bottom: 0;
+  width: "100%";
 }
 
 /*The following CSS are for the Registration page */
@@ -150,7 +154,7 @@ h4 {
   flex-direction: column;
 }
 .carousel-cap {
-  color: white;
+  color: purple;
   text-align: start;
   margin-left: 15%;
   margin-right: 15%;
@@ -161,7 +165,8 @@ h4 {
   text-align: center;
 }
 .carousel {
-  background-color: purple !important;
+  /* background-color: purple !important; */
+  margin-top: 20px;
   height: 850px;
 }
 

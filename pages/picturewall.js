@@ -1,10 +1,9 @@
 import TopNavbar from "../components/TopNavbar";
 
 import React, { useEffect, useState } from "react";
-import { Card, Button } from "react-bootstrap";
+
 import "bootstrap/dist/css/bootstrap.min.css";
 import Link from "next/link";
-import Footer from "../components/Footer";
 
 const API_KEY = "f640a1d7d20cf0f12efc4848065a016e";
 
@@ -104,11 +103,10 @@ const PictureWall = () => {
         />
         <PictureGroup
           tag={"MT.Pisgah"}
-          title={"Pictures at Purposal Day!"}
+          title={"Pictures at proposal  Day!"}
           start_key={47}
         />
       </div>
-      <Footer />
     </div>
   );
 };
