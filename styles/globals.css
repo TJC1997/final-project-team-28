@@ -4,7 +4,8 @@ html,
 body {
   padding: 0;
   margin: 0;
-  background-color: cornsilk;
+  background-color: cornsilk !important;
+  height: 100%;
 }
 
 * {
@@ -12,12 +13,7 @@ body {
 }
 /*The following CSS are for the .main-contents and layout */
 .main-contents {
-  margin: 0px;
   text-align: center;
-}
-
-.layout {
-  background-color: cornsilk;
 }
 
 .main-contents h3 {
@@ -167,4 +163,43 @@ h4 {
 .carousel {
   background-color: purple !important;
   height: 850px;
+}
+
+/*The following CSS are for the picturewall page */
+.picture-card {
+  height: 450px;
+  width: 350px;
+}
+
+.picture-img {
+  max-width: 350px;
+  max-height: 400px;
+  width: auto;
+}
+
+.picture-group {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+
+  margin: 10px;
+}
+
+.picture-card h5 {
+  color: blueviolet;
+}
+
+.picture-group-title {
+  text-align: start !important;
+  color: blue !important;
+  margin: 20px;
+}
+
+.big-picture-img {
+  margin: 10%;
+}
+.big-picture {
+  text-align: center;
+  height: 900px;
 }
