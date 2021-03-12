@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 import { Carousel } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import aboutText from "../data/aboutText.json";
-import Footer from "../components/Footer";
+
 const API_KEY = "f640a1d7d20cf0f12efc4848065a016e";
 
 const About = () => {
@@ -56,13 +56,10 @@ const About = () => {
       <TopNavbar about />
       <div className="main-contents">
         <h3>Our Story Page</h3>
-        {/* {Object.keys(pictures).map((item, i) => (
-          <img src={generateLink(pictures[item])} key={i} />
-        ))} */}
 
-        <Carousel className="carousel">
+        <Carousel className="carousel" interval={null} indicators={false}>
           {Object.keys(pictures).map((item, i) => (
-            <Carousel.Item key={i} interval={1000000000}>
+            <Carousel.Item key={i}>
               <img
                 className="carousel-img"
                 src={generateLink(pictures[item])}
@@ -75,7 +72,6 @@ const About = () => {
           ))}
         </Carousel>
       </div>
-      <Footer />
     </div>
   );
 };

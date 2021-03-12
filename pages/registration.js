@@ -1,8 +1,5 @@
 import TopNavbar from "../components/TopNavbar";
-
 import { FaAmazon, FaBed, FaTshirt, FaHeart } from "react-icons/fa";
-
-import Footer from "../components/Footer";
 
 const Registration = () => {
   return (
@@ -59,7 +56,6 @@ const Registration = () => {
           <h1> Thank you! </h1>
         </div>
       </div>
-      <Footer />
     </div>
   );
 };

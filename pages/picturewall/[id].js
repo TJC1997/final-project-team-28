@@ -113,7 +113,7 @@ function PicturePage() {
       <div className="big-picture">
         <PictureImg className="main-content" tag={tag} pic_id={pic_id} />
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }
