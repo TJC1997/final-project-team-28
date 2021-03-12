@@ -1,13 +1,15 @@
 import TopNavbar from "../components/TopNavbar";
-import Layout from "../components/Layout";
+
+import Footer from "../components/Footer";
 const Info = () => {
   return (
-    <Layout>
+    <div>
       <TopNavbar info />
       <div className="main-contents">
         <h3>Wedding Info Page</h3>
       </div>
-    </Layout>
+      <Footer />
+    </div>
   );
 };
 

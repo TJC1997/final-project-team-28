@@ -1,10 +1,10 @@
 import TopNavbar from "../components/TopNavbar";
-import Layout from "../components/Layout";
+
 import React, { useEffect, useState } from "react";
 import { Carousel } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import aboutText from "../data/aboutText.json";
-
+import Footer from "../components/Footer";
 const API_KEY = "f640a1d7d20cf0f12efc4848065a016e";
 
 const About = () => {
@@ -52,7 +52,7 @@ const About = () => {
   }, []);
 
   return (
-    <Layout>
+    <div>
       <TopNavbar about />
       <div className="main-contents">
         <h3>Our Story Page</h3>
@@ -67,15 +67,16 @@ const About = () => {
                 className="carousel-img"
                 src={generateLink(pictures[item])}
               />
-              <p className="carousel-cap">
+              <div className="carousel-cap">
                 <h4>{aboutText[item].title}</h4>
                 <p>{aboutText[item].text}</p>
-              </p>
+              </div>
             </Carousel.Item>
           ))}
         </Carousel>
       </div>
-    </Layout>
+      <Footer />
+    </div>
   );
 };
 
