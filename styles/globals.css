@@ -125,7 +125,7 @@ footer {
 }
 
 .registrateBack {
-  background-image: url("../images/scene.jpg");
+  background-image: url("../public/scene.jpg");
   text-align: center;
   height: 350px;
   background-position: center;
