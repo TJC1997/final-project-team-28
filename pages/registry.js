@@ -7,7 +7,7 @@ const Registration = () => {
       <TopNavbar registration />
       <div className="main-contents">
         <div className="registrateBack">
-          <h3 className="registration">Registration Page</h3>
+          <h2 className="registration">Registry Page</h2>
           <h4 className="registration">
             {" "}
             Here is a few stores we registered with:
