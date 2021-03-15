@@ -6,7 +6,7 @@ body > div:first-child,
 div#__next,
 div#__next > div {
   height: 95% !important;
-  background-color: lightblue !important;
+  background-color: #b19cd9 !important;
 }
 
 * {
@@ -14,14 +14,20 @@ div#__next > div {
 }
 /*The following CSS are for the .main-contents and layout */
 .main-contents {
-  margin-top: 10px;
   margin-bottom: 10px;
   text-align: center;
   height: auto !important;
 }
 
 .main-contents h3 {
-  color: blueviolet;
+  color: black;
+  font-family: "Lucida Handwriting", cursive;
+  margin-top: 20px;
+}
+
+.main-contents h2 {
+  color: black;
+  font-family: "Lucida Handwriting", cursive;
 }
 
 /*The following CSS are for the TopNavBar */
@@ -32,7 +38,7 @@ div#__next > div {
 .nav-link {
   color: #552c4a !important;
   font-size: large;
-  font-weight: 400;
+  font-family: "Lucida Handwriting", cursive;
 }
 
 .navbar-toggler {
@@ -43,7 +49,7 @@ div#__next > div {
 .nav-link.active {
   border-bottom: 3px solid #319df6;
   width: fit-content;
-  padding: 10px;
+  font-weight: bold;
 }
 
 .navbar-brand {
@@ -59,24 +65,29 @@ nav {
 
 nav,
 footer {
-  height: 50px;
+  height: 90px;
 }
 
 /*The following CSS are for the Footer */
 
-.footer a {
-  color: #552c4a;
+footer a {
+  color: black;
+}
+
+footer a:hover {
+  text-decoration: none;
 }
 
 footer {
-  margin-top: 10px;
   text-align: center;
+  padding-top: 10px;
   font-size: 15px;
-  color: white;
+  color: black;
   background-color: #aac3c0;
-  position: "absolute";
+  position: absolute;
   bottom: 0;
-  width: "100%";
+  width: 100%;
+  font-family: "Lucida Handwriting", cursive;
 }
 
 /*The following CSS are for the Registration page */
@@ -99,15 +110,33 @@ footer {
 
 .icon {
   font-size: 100px;
+  color: purple;
+}
+
+@media screen and (max-width: 850px) {
+  .store {
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+  }
+  .icon {
+    margin-top: 20px;
+    font-size: 80px;
+    padding: 10px;
+  }  
+  .thanks {
+    margin-top: 250px;
+    padding-bottom: 30px;
+  }
 }
 
 .thanks {
   text-align: center;
-  color: #552c4a;
+  color: black;
 }
 
 .link {
-  color: #552c4a;
+  color: black;
 }
 
 .mr-auto a {
@@ -133,7 +162,7 @@ footer {
   background-size: cover;
 }
 
-.registrateBack h3 {
+.registrateBack h2 {
   padding-top: 100px;
   font-size: 50px;
   color: lightblue;
@@ -192,12 +221,12 @@ h4 {
 }
 
 .picture-card h5 {
-  color: blueviolet;
+  color: black;
 }
 
 .picture-group-title {
   text-align: start !important;
-  color: blue !important;
+  color: black !important;
   margin: 20px;
 }
 
@@ -207,4 +236,22 @@ h4 {
 .big-picture {
   text-align: center;
   height: 900px;
+}
+
+.navbar-nav {
+  display: flex;
+  flex-direction: column;
+  padding-left: 0;
+  margin: 0px;
+  list-style-type: none;
+}
+
+p {
+  color: black;
+}
+
+h4 { 
+  color: black;
+  padding: 20px;
+  font-family: "Lucida Handwriting", cursive;
 }

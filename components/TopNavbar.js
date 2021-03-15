@@ -41,11 +41,11 @@ export default function TopNavbar(props) {
             <Nav.Link href="/picturewall">Picture Wall</Nav.Link>
           )}
           {props.registration ? (
-            <Nav.Link className=" active .nav-link" href="/registration">
+            <Nav.Link className=" active .nav-link" href="/registry">
               Registration
             </Nav.Link>
           ) : (
-            <Nav.Link href="/registration">Registration</Nav.Link>
+            <Nav.Link href="/registry">Registry</Nav.Link>
           )}
         </Nav>
       </Navbar.Collapse>
