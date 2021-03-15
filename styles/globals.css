@@ -84,7 +84,7 @@ footer {
   font-size: 15px;
   color: black;
   background-color: #aac3c0;
-  position: absolute;
+  position: static;
   bottom: 0;
   width: 100%;
   font-family: "Lucida Handwriting", cursive;
@@ -254,4 +254,18 @@ h4 {
   color: black;
   padding: 20px;
   font-family: "Lucida Handwriting", cursive;
+}
+
+.home-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-cap {
+    font-size: large;
+    width: calc(100% - 80px);
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 16px;
 }
