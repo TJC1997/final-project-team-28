@@ -6,7 +6,7 @@ body > div:first-child,
 div#__next,
 div#__next > div {
   height: 95% !important;
-  background-color: #b19cd9 !important;
+  background-color: #D3D3D3 !important;
 }
 
 * {
@@ -32,7 +32,7 @@ div#__next > div {
 
 /*The following CSS are for the TopNavBar */
 .bg-purple {
-  background-color: #aac3c0;
+  background-color: #b19cd9;
 }
 
 .nav-link {
@@ -83,7 +83,7 @@ footer {
   padding-top: 10px;
   font-size: 15px;
   color: black;
-  background-color: #aac3c0;
+  background-color: #b19cd9;
   position: static;
   bottom: 0;
   width: 100%;
@@ -168,7 +168,7 @@ footer {
   color: lightblue;
 }
 
-h4 {
+.registrateBack h4 {
   color: lightblue;
 }
 
