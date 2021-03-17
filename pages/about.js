@@ -10,7 +10,6 @@ const About = () => {
   const [pictures, set_pictures] = useState([]);
 
   function generateLink(pic) {
-    console.log(pic);
     return (
       "https://farm" +
       pic.farm +
@@ -30,7 +29,6 @@ const About = () => {
         const link = `https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=${process.env.NEXT_PUBLIC_FLICKR_API_KEY}&user_id=192392684%40N08&tags=${page_tag}&format=json&nojsoncallback=1`;
         const res = await fetch(link);
         jsBody = await res.json();
-        console.log(link);
       } catch (e) {
         if (e instanceof DOMException) {
           console.log("HTTP request abort");

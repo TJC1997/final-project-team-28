@@ -15,7 +15,6 @@ function PictureImg(props) {
         const link = `https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=${process.env.NEXT_PUBLIC_FLICKR_API_KEY}&user_id=192392684%40N08&tags=${page_tag}&format=json&nojsoncallback=1`;
         const res = await fetch(link);
         jsBody = await res.json();
-        console.log(link);
       } catch (e) {
         if (e instanceof DOMException) {
           console.log("HTTP request abort");
@@ -48,8 +47,6 @@ function PictureImg(props) {
       ".jpg"
     );
   }
-
-  // console.log(pictures[props.pic_id]);
 
   return (
     <div>
@@ -86,7 +83,6 @@ function PicturePage() {
 
   useEffect(() => {
     if (router && router.query) {
-      console.log("ID", router.query.id);
       set_id(router.query.id);
     }
   }, [router]);

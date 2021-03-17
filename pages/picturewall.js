@@ -28,7 +28,6 @@ function PictureGroup(props) {
         const link = `https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=${process.env.NEXT_PUBLIC_FLICKR_API_KEY}&user_id=192392684%40N08&tags=${page_tag}&format=json&nojsoncallback=1`;
         const res = await fetch(link);
         jsBody = await res.json();
-        // console.log(link);
       } catch (e) {
         if (e instanceof DOMException) {
           console.log("HTTP request abort");
@@ -50,7 +49,6 @@ function PictureGroup(props) {
       <h3 className="picture-group-title">{props.title}</h3>
       <div className="picture-group">
         {Object.keys(pictures).map((item, i) => {
-          // console.log(i + props.start_key);
           return (
             <div className="picture-card" key={i + props.start_key}>
               <Link href={`picturewall/${i + props.start_key}`}>
