@@ -6,7 +6,7 @@ body > div:first-child,
 div#__next,
 div#__next > div {
   height: 95% !important;
-  background-color: #D3D3D3 !important;
+  background-color: #d3d3d3 !important;
 }
 
 * {
@@ -63,9 +63,12 @@ nav {
   font-size: 30px;
 }
 
-nav,
-footer {
+nav {
   height: 90px;
+}
+
+footer {
+  height: 60px;
 }
 
 /*The following CSS are for the Footer */
@@ -113,7 +116,7 @@ footer {
   color: purple;
 }
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 992px) {
   .store {
     display: flex;
     flex-direction: column;
@@ -123,10 +126,18 @@ footer {
     margin-top: 20px;
     font-size: 80px;
     padding: 10px;
-  }  
+  }
   .thanks {
     margin-top: 250px;
     padding-bottom: 30px;
+  }
+  .main-contents img {
+    max-width: 400px !important;
+    height: auto !important;
+  }
+  .main-contents {
+    margin-left: 15%;
+    margin-right: 15%;
   }
 }
 
@@ -154,7 +165,7 @@ footer {
 }
 
 .registrateBack {
-  background-image: url("../public/scene.jpg");
+  /* background-image: url("../public/scene.jpg"); */
   text-align: center;
   height: 350px;
   background-position: center;
@@ -165,11 +176,11 @@ footer {
 .registrateBack h2 {
   padding-top: 100px;
   font-size: 50px;
-  color: lightblue;
+  /* color: lightblue; */
 }
 
 .registrateBack h4 {
-  color: lightblue;
+  /* color: lightblue; */
 }
 
 /*The following CSS are for the About page */
@@ -183,7 +194,6 @@ footer {
   flex-direction: column;
 }
 .carousel-cap {
-  color: purple;
   text-align: start;
   margin-left: 15%;
   margin-right: 15%;
@@ -250,22 +260,27 @@ p {
   color: black;
 }
 
-h4 { 
+h4 {
   color: black;
   padding: 20px;
   font-family: "Lucida Handwriting", cursive;
 }
 
 .home-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .home-cap {
-    font-size: large;
-    width: calc(100% - 80px);
-    max-width: 1200px;
-    margin: 0 auto;
-    margin-top: 16px;
+  /* color: purple; */
+  text-align: start;
+  margin-left: 15%;
+  margin-right: 15%;
+  white-space: pre-line;
+  font-size: large;
+}
+.home-pic {
+  width: 600px;
+  margin-bottom: 20px;
 }

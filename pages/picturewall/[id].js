@@ -1,8 +1,6 @@
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 import TopNavbar from "../../components/TopNavbar";
-import Footer from "../../components/Footer";
-const API_KEY = "f640a1d7d20cf0f12efc4848065a016e";
 
 function PictureImg(props) {
   const [pictures, set_pictures] = useState([]);
@@ -14,7 +12,7 @@ function PictureImg(props) {
       set_loading(true);
       let jsBody = {};
       try {
-        const link = `https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=${API_KEY}&user_id=192392684%40N08&tags=${page_tag}&format=json&nojsoncallback=1`;
+        const link = `https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=${process.env.NEXT_PUBLIC_FLICKR_API_KEY}&user_id=192392684%40N08&tags=${page_tag}&format=json&nojsoncallback=1`;
         const res = await fetch(link);
         jsBody = await res.json();
         console.log(link);

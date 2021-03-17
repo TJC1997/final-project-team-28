@@ -5,8 +5,6 @@ import React, { useEffect, useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Link from "next/link";
 
-const API_KEY = "f640a1d7d20cf0f12efc4848065a016e";
-
 function PictureGroup(props) {
   const [pictures, set_pictures] = useState([]);
   const page_tag = props.tag;
@@ -27,7 +25,7 @@ function PictureGroup(props) {
     async function featchSearchResults() {
       let jsBody = {};
       try {
-        const link = `https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=${API_KEY}&user_id=192392684%40N08&tags=${page_tag}&format=json&nojsoncallback=1`;
+        const link = `https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=${process.env.NEXT_PUBLIC_FLICKR_API_KEY}&user_id=192392684%40N08&tags=${page_tag}&format=json&nojsoncallback=1`;
         const res = await fetch(link);
         jsBody = await res.json();
         // console.log(link);

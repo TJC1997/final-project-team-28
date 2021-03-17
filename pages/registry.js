@@ -9,7 +9,6 @@ const Registration = () => {
         <div className="registrateBack">
           <h2 className="registration">Registry Page</h2>
           <h4 className="registration">
-            {" "}
             Here is a few stores we registered with:
           </h4>
         </div>
@@ -52,7 +51,6 @@ const Registration = () => {
           </div>
         </div>
         <div className="thanks">
-          {" "}
           <h1> Thank you! </h1>
         </div>
       </div>
