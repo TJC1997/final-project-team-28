@@ -99,8 +99,13 @@ const PictureWall = () => {
         />
         <PictureGroup
           tag={"MT.Pisgah"}
-          title={"Pictures at proposal  Day!"}
+          title={"Pictures at proposal Day!"}
           start_key={47}
+        />
+        <PictureGroup
+          tag={"Beach"}
+          title={"Pictures at Beach Trip!"}
+          start_key={58}
         />
       </div>
     </div>
